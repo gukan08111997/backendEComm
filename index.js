@@ -46,7 +46,7 @@ app.use("/images",express.static("upload/images"));
 app.post("/upload",upload.single("product"),(req,res)=>{
     res.json({
         status:"success",
-        image_url:`http://localhost:${port}/images/${req.file.filename}`
+        image_url:`https://backendecomm-2.onrender.com/images/${req.file.filename}`
     })
 })
 app.listen(port,(err)=>{
